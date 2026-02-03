@@ -22,7 +22,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "package-lock.json not found — running npm install as fallback"
+            npm install
+          fi
 
       - name: Build
         run: npm run build
