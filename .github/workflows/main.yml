@@ -49,10 +49,10 @@ jobs:
             aws s3 cp "$SOURCE_DIR/index.html" "s3://$S3_BUCKET/index.html" --acl public-read --cache-control no-cache
           fi
 
-      - name: (Optional) Create CloudFront invalidation
-        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
-        env:
-          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        run: |
-          echo "Invalidating CloudFront distribution $DISTRIBUTION"
-          aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION" --paths "/*"
+      # - name: (Optional) Create CloudFront invalidation
+      #   if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+      #   env:
+      #     DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+      #   run: |
+      #     echo "Invalidating CloudFront distribution $DISTRIBUTION"
+      #     aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION" --paths "/*"
