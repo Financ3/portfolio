@@ -12,6 +12,8 @@ jobs:
   build-and-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
+    env:
+      ROOT_DIR: portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,6 +24,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: ${{ env.ROOT_DIR }}
         run: |
           if [ -f package-lock.json ]; then
             npm ci
@@ -31,6 +34,7 @@ jobs:
           fi
 
       - name: Build
+        working-directory: ${{ env.ROOT_DIR }}
         run: npm run build
 
       - name: Configure AWS credentials
@@ -41,6 +45,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Sync build to S3
+        working-directory: ${{ env.ROOT_DIR }}
         env:
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
           SOURCE_DIR: dist
