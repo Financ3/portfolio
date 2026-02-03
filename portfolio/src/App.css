@@ -1,0 +1,52 @@
+/* Mobile-first portfolio styles */
+
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#7c5cff;
+  --text:#e6eef8;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{margin:0;font-family:Inter, system-ui, -apple-system,Segoe UI, Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text);}
+
+#site-root{max-width:900px;margin:0 auto;padding:1rem;}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.5rem 0;}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.site-title{font-size:1.125rem;margin:0}
+
+.hamburger{background:transparent;border:0;padding:0.5rem;border-radius:6px;color:var(--text)}
+.hamburger:focus{outline:2px solid rgba(124,92,255,0.25)}
+.hamburger-box{display:inline-block;width:24px;height:18px;position:relative}
+.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after{background:var(--text);display:block;height:2px;border-radius:2px;position:absolute;left:0;right:0}
+.hamburger-inner{top:50%;transform:translateY(-50%)}
+.hamburger-inner:before{content:"";top:-7px}
+.hamburger-inner:after{content:"";top:7px}
+
+.site-nav{display:flex;gap:0.5rem}
+.nav-link{background:transparent;border:1px solid transparent;color:var(--text);padding:0.45rem 0.6rem;border-radius:6px;font-size:0.95rem}
+.nav-link:hover{background:rgba(255,255,255,0.03)}
+.nav-link.active{background:linear-gradient(90deg,var(--accent),#5fb6ff);color:#061025;border:1px solid rgba(0,0,0,0.12)}
+
+.site-main{padding-top:1rem}
+.page{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:1rem;border-radius:10px}
+.title{margin:0 0 0.5rem 0;font-size:1.25rem}
+.lead{margin:0 0 1rem 0;color:var(--muted)}
+.projects-list{padding-left:1rem}
+
+.site-footer{padding:1.5rem 0;color:var(--muted);font-size:0.9rem;text-align:center}
+
+/* Small screens: stack nav into a collapsible menu */
+.site-nav{position:relative}
+@media (max-width:640px){
+  .site-nav{position:absolute;right:0;top:56px;display:flex;flex-direction:column;background:var(--card);padding:0.5rem;border-radius:8px;box-shadow:0 8px 20px rgba(2,6,23,0.6);transform-origin:top right;opacity:0;pointer-events:none;transform:scale(0.95);transition:opacity 160ms,transform 160ms}
+  .site-nav.open{opacity:1;pointer-events:auto;transform:scale(1)}
+}
+
+@media (min-width:641px){
+  .hamburger{display:none}
+}
+
