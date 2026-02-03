@@ -10,7 +10,7 @@ function Home() {
   return (
     <section className="page">
       <h2 className="title">Welcome</h2>
-      <p className="lead">Hi — I'm building a small portfolio site. This is the home page.</p>
+      <p className="lead">Hi — I'm building a small portfolio site! This is the home page.</p>
       <p>Use the navigation to view About and Projects.</p>
     </section>
   )
