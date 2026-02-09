@@ -9,9 +9,7 @@ export default function Projects() {
         <li>
           <strong>Project A</strong> — Short description, link, and tech used.
         </li>
-        <li>
-          <strong>Project B</strong> — Short description, link, and tech used.
-        </li>
+
       </ul>
     </section>
   )

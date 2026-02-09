@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-type Page = 'home' | 'about' | 'projects'
+type Page = 'home' | 'about' | 'projects' | 'resume'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -51,6 +51,12 @@ export default function Layout({ children, current, onNavigate }: LayoutProps) {
             onClick={() => onNavigate('projects')}
           >
             Projects
+          </button>
+          <button
+            className={"nav-link " + (current === 'resume' ? 'active' : '')}
+            onClick={() => onNavigate('resume')}
+          >
+            Resume
           </button>
         </nav>
       </header>

@@ -3,8 +3,9 @@ import './App.css'
 import Layout from './components/Layout'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import Resume from './pages/Resume'
 
-type Page = 'home' | 'about' | 'projects'
+type Page = 'home' | 'about' | 'projects' | 'resume'
 
 type HomeProps = { onNavigate: (p: Page) => void }
 
@@ -24,6 +25,7 @@ function App() {
   const pathToPage = useCallback((path: string): Page => {
     if (path.startsWith('/projects')) return 'projects'
     if (path.startsWith('/about')) return 'about'
+    if (path.startsWith('/resume')) return 'resume'
     return 'home'
   }, [])
 
@@ -53,6 +55,7 @@ function App() {
       {page === 'home' && <Home onNavigate={navigate} />}
       {page === 'about' && <About />}
       {page === 'projects' && <Projects />}
+      {page === 'resume' && <Resume />}
     </Layout>
   )
 }

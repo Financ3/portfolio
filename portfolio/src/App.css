@@ -33,7 +33,7 @@ body{margin:0;display:flex;flex-direction:column;min-height:100vh;font-family:In
 .nav-link.active{background:linear-gradient(90deg,var(--accent),#5fb6ff);color:#061025;border:1px solid rgba(0,0,0,0.12)}
 
 .site-main{padding-top:1rem;flex:1}
-.page{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:1rem;border-radius:10px}
+.page{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:1rem;border-radius:10px;display:flex;flex-direction:column;min-height:0}
 .title{margin:0 0 0.5rem 0;font-size:1.25rem}
 .lead{margin:0 0 1rem 0;color:var(--muted)}
 .projects-list{padding-left:1rem}
@@ -49,5 +49,17 @@ body{margin:0;display:flex;flex-direction:column;min-height:100vh;font-family:In
 
 @media (min-width:641px){
   .hamburger{display:none}
+}
+
+/* PDF preview styles */
+.pdf-container{width:100%;max-width:100%;overflow:auto;border-radius:8px;flex:1;min-height:0}
+.pdf-embed{display:block;width:100%;height:100%;border:0;min-height:400px}
+
+/* Constrain the preview so it can't push the page larger than the viewport */
+.pdf-container{max-height:calc(100vh - 180px)}
+
+@media (max-width:640px){
+  .pdf-container{max-height:calc(100vh - 160px)}
+  .pdf-embed{min-height:320px}
 }
 
