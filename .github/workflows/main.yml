@@ -60,7 +60,7 @@ jobs:
             aws s3 cp "$SOURCE_DIR/index.html" "s3://$S3_BUCKET/index.html" --cache-control no-cache
           fi
 
-      # - name: (Optional) Create CloudFront invalidation
+      # - name: (Optional) Create CloudFront invalidation (if distribution ID is provided)
       #   if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID != '' }}
       #   env:
       #     DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
