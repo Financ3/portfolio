@@ -14,7 +14,12 @@ function Home({ onNavigate }: HomeProps) {
     <section className="page">
       <h2 className="title">Welcome</h2>
       <p className="lead">Welcome — this is my portfolio: a carefully curated mix of experiments, polished bits, and things that only work after dark. See where the real magic happens on the <a href="/projects" onClick={(e) => { e.preventDefault(); onNavigate('projects') }}>Projects</a> page. Want to hire someone who debugs in their sleep? Reach out on <a href="https://www.linkedin.com/in/tannerfrancis/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
-      <p>Use the navigation to view About and Projects.</p>
+      <p>
+        This portfolio itself is built with <strong>React</strong> and <strong>TypeScript</strong>,
+        bundled with <strong>Vite</strong>, and hosted as a static site on <strong>AWS S3</strong>.
+        The source lives on GitHub, and deployments are automated via a <strong>GitHub Actions</strong> CI/CD
+        pipeline that builds and syncs the dist to S3 on every push to main.
+      </p>
     </section>
   )
 }

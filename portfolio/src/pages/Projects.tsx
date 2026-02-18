@@ -7,9 +7,15 @@ export default function Projects() {
       <p className="lead">A selection of projects and experiments.</p>
       <ul className="projects-list">
         <li>
-          <strong>Project A</strong> — Short description, link, and tech used.
+          <strong>
+            <a href="http://34.229.174.148:5050/" target="_blank" rel="noopener noreferrer">
+              One Up Dating
+            </a>
+          </strong>{" "}
+          — A rough-around-the-edges app, but a solid showcase of a full CI/CD pipeline
+          built with GitHub Actions, AWS infrastructure (EC2 for SSR React, RDS for
+          PostgreSQL), and real-time communication via WebSockets.
         </li>
-
       </ul>
     </section>
   )
