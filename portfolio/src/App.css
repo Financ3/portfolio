@@ -10,7 +10,8 @@
 
 *{box-sizing:border-box}
 #root{flex:1;display:flex;flex-direction:column}
-html,body,#root{height:100%;}
+html,body,#root{min-height:100%;}
+html{background:var(--bg);}
 body{margin:0;display:flex;flex-direction:column;min-height:100vh;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text);}
 
 #site-root{width:100%;max-width:100%;margin:0;padding:1rem;flex:1;display:flex;flex-direction:column;}

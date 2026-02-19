@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-type Page = 'home' | 'about' | 'projects' | 'resume'
+type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy'
 
 interface LayoutProps {
   children: React.ReactNode

@@ -4,8 +4,9 @@ import Layout from './components/Layout'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Resume from './pages/Resume'
+import QuoteOfTheDayPrivacy from './pages/QuoteOfTheDayPrivacy'
 
-type Page = 'home' | 'about' | 'projects' | 'resume'
+type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy'
 
 type HomeProps = { onNavigate: (p: Page) => void }
 
@@ -31,11 +32,14 @@ function App() {
     if (path.startsWith('/projects')) return 'projects'
     if (path.startsWith('/about')) return 'about'
     if (path.startsWith('/resume')) return 'resume'
+    if (path.startsWith('/quote-of-the-day/privacy')) return 'quote-privacy'
     return 'home'
   }, [])
 
   const pageToPath = useCallback((p: Page) => {
-    return p === 'home' ? '/' : `/${p}`
+    if (p === 'home') return '/'
+    if (p === 'quote-privacy') return '/quote-of-the-day/privacy'
+    return `/${p}`
   }, [])
 
   useEffect(() => {
@@ -54,6 +58,10 @@ function App() {
     }
     setPage(p)
   }, [pageToPath])
+
+  if (page === 'quote-privacy') {
+    return <QuoteOfTheDayPrivacy />
+  }
 
   return (
     <Layout current={page} onNavigate={navigate}>
