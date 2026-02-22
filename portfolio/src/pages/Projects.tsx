@@ -12,7 +12,7 @@ export default function Projects() {
               One Up Dating
             </a>
           </strong>{" "}
-          — A rough-around-the-edges app, but a solid showcase of a full CI/CD pipeline
+          — A rough-around-the-edges dating app mock-up, but a solid showcase of a full CI/CD pipeline
           built with GitHub Actions, AWS infrastructure (EC2 for SSR React, RDS for
           PostgreSQL), and real-time communication via WebSockets.
         </li>
