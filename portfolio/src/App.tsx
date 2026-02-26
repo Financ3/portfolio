@@ -5,8 +5,9 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import QuoteOfTheDayPrivacy from './pages/QuoteOfTheDayPrivacy'
+import QuoteOfTheDaySupport from './pages/QuoteOfTheDaySupport'
 
-type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy'
+type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy' | 'quote-support'
 
 type HomeProps = { onNavigate: (p: Page) => void }
 
@@ -33,12 +34,14 @@ function App() {
     if (path.startsWith('/about')) return 'about'
     if (path.startsWith('/resume')) return 'resume'
     if (path.startsWith('/quote-of-the-day/privacy')) return 'quote-privacy'
+    if (path.startsWith('/quote-of-the-day/support')) return 'quote-support'
     return 'home'
   }, [])
 
   const pageToPath = useCallback((p: Page) => {
     if (p === 'home') return '/'
     if (p === 'quote-privacy') return '/quote-of-the-day/privacy'
+    if (p === 'quote-support') return '/quote-of-the-day/support'
     return `/${p}`
   }, [])
 
@@ -61,6 +64,10 @@ function App() {
 
   if (page === 'quote-privacy') {
     return <QuoteOfTheDayPrivacy />
+  }
+
+  if (page === 'quote-support') {
+    return <QuoteOfTheDaySupport />
   }
 
   return (
