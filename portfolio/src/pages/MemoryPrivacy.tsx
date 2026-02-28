@@ -1,27 +1,28 @@
-export default function QuoteOfTheDayPrivacy() {
+export default function MemoryPrivacy() {
   return (
     <div style={{ minHeight: '100vh', background: '#0f1724' }}>
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '40px 24px', fontFamily: 'sans-serif', color: 'rgba(255, 255, 255, 0.87)', lineHeight: 1.7 }}>
-      <h1>Privacy Policy — Quote of the Day</h1>
+      <h1>Privacy Policy — Memory</h1>
       <p><strong>Effective Date:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
       <p>
-        This Privacy Policy describes how <strong>Quote of the Day</strong> ("the App") handles your information.
-        The App is a simple daily quote application that displays an inspirational quote each day, which you can
-        set as your device wallpaper or background.
+        This Privacy Policy describes how <strong>Memory</strong> ("the App") handles your information.
+        The App is a personal memory retention tool that helps you capture, organize, and review your
+        memories and notes entirely on your device.
       </p>
 
       <h2>1. Information We Collect</h2>
       <p>
-        <strong>Quote of the Day does not collect, store, or transmit any personal information.</strong> The App
+        <strong>Memory does not collect, store, or transmit any personal information to external servers.</strong> The App
         functions entirely on your device and does not require you to create an account, log in, or provide any
-        personal data.
+        personal data to us.
       </p>
 
       <h2>2. Data Storage</h2>
       <p>
-        Any preferences or settings you configure within the App (such as display preferences) are stored
-        locally on your device only. This data never leaves your device and is not accessible to us.
+        All memories, notes, and content you create within the App are stored locally on your device only.
+        This data never leaves your device and is not accessible to us. You retain full ownership and
+        control over everything you enter into the App.
       </p>
 
       <h2>3. Third-Party Services</h2>
@@ -32,9 +33,8 @@ export default function QuoteOfTheDayPrivacy() {
 
       <h2>4. Internet Access</h2>
       <p>
-        The App may request internet access solely to fetch daily quote content. No personally identifiable
-        information is transmitted as part of these requests. We do not log IP addresses or link quote
-        requests to individual users.
+        The App does not require internet access to function. All features operate fully offline. If any
+        future version of the App uses network access, this policy will be updated accordingly.
       </p>
 
       <h2>5. Children's Privacy</h2>

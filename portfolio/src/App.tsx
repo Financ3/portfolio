@@ -6,8 +6,10 @@ import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import QuoteOfTheDayPrivacy from './pages/QuoteOfTheDayPrivacy'
 import QuoteOfTheDaySupport from './pages/QuoteOfTheDaySupport'
+import MemoryPrivacy from './pages/MemoryPrivacy'
+import MemorySupport from './pages/MemorySupport'
 
-type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy' | 'quote-support'
+type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy' | 'quote-support' | 'memory-privacy' | 'memory-support'
 
 type HomeProps = { onNavigate: (p: Page) => void }
 
@@ -35,6 +37,8 @@ function App() {
     if (path.startsWith('/resume')) return 'resume'
     if (path.startsWith('/quote-of-the-day/privacy')) return 'quote-privacy'
     if (path.startsWith('/quote-of-the-day/support')) return 'quote-support'
+    if (path.startsWith('/memory-retention/privacy')) return 'memory-privacy'
+    if (path.startsWith('/memory-retention/support')) return 'memory-support'
     return 'home'
   }, [])
 
@@ -42,6 +46,8 @@ function App() {
     if (p === 'home') return '/'
     if (p === 'quote-privacy') return '/quote-of-the-day/privacy'
     if (p === 'quote-support') return '/quote-of-the-day/support'
+    if (p === 'memory-privacy') return '/memory-retention/privacy'
+    if (p === 'memory-support') return '/memory-retention/support'
     return `/${p}`
   }, [])
 
@@ -68,6 +74,14 @@ function App() {
 
   if (page === 'quote-support') {
     return <QuoteOfTheDaySupport />
+  }
+
+  if (page === 'memory-privacy') {
+    return <MemoryPrivacy />
+  }
+
+  if (page === 'memory-support') {
+    return <MemorySupport />
   }
 
   return (

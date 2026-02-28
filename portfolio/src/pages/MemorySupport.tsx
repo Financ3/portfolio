@@ -1,11 +1,11 @@
-export default function QuoteOfTheDaySupport() {
+export default function MemorySupport() {
   return (
     <div style={{ minHeight: '100vh', background: '#0f1724' }}>
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '40px 24px', fontFamily: 'sans-serif', color: 'rgba(255, 255, 255, 0.87)', lineHeight: 1.7 }}>
-      <h1>Support — Quote of the Day</h1>
+      <h1>Support — Memory</h1>
 
       <p>
-        Need help with <strong>Quote of the Day</strong>? We're happy to assist. Reach out to us at{' '}
+        Need help with <strong>Memory</strong>? We're happy to assist. Reach out to us at{' '}
         <a href="mailto:codebystory@gmail.com">codebystory@gmail.com</a> and we'll get back to you as soon as we can.
       </p>
 
