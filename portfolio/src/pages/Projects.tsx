@@ -56,8 +56,13 @@ export default function Projects() {
           and active recall techniques.
         </li>
         <li>
-          <strong><Tip>Quote of the Day</Tip></strong>{" "}
-          — A mobile app that delivers a fresh quote each day to inspire and motivate.
+          <strong>
+            <a href="https://apps.apple.com/us/app/the-daily-ember/id6759697711" target="_blank" rel="noopener noreferrer">
+              The Daily Ember
+            </a>
+          </strong>{" "}
+          — A daily quote app delivering a fresh and funny, inspiring, or depressing quote each day! The app comes in an image format designed to be used as a wallpaper on your phone.
+          {" "}Available now on iOS. <Tip>Android</Tip> listing is pending app store approval.
         </li>
       </ul>
     </section>
