@@ -8,8 +8,10 @@ import QuoteOfTheDayPrivacy from './pages/QuoteOfTheDayPrivacy'
 import QuoteOfTheDaySupport from './pages/QuoteOfTheDaySupport'
 import MemoryPrivacy from './pages/MemoryPrivacy'
 import MemorySupport from './pages/MemorySupport'
+import EnvelopeBudgetPrivacy from './pages/EnvelopeBudgetPrivacy'
+import EnvelopeBudgetSupport from './pages/EnvelopeBudgetSupport'
 
-type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy' | 'quote-support' | 'memory-privacy' | 'memory-support'
+type Page = 'home' | 'about' | 'projects' | 'resume' | 'quote-privacy' | 'quote-support' | 'memory-privacy' | 'memory-support' | 'envelope-privacy' | 'envelope-support'
 
 type HomeProps = { onNavigate: (p: Page) => void }
 
@@ -39,6 +41,8 @@ function App() {
     if (path.startsWith('/quote-of-the-day/support')) return 'quote-support'
     if (path.startsWith('/memory-retention/privacy')) return 'memory-privacy'
     if (path.startsWith('/memory-retention/support')) return 'memory-support'
+    if (path.startsWith('/envelope-budget/privacy')) return 'envelope-privacy'
+    if (path.startsWith('/envelope-budget/support')) return 'envelope-support'
     return 'home'
   }, [])
 
@@ -48,6 +52,8 @@ function App() {
     if (p === 'quote-support') return '/quote-of-the-day/support'
     if (p === 'memory-privacy') return '/memory-retention/privacy'
     if (p === 'memory-support') return '/memory-retention/support'
+    if (p === 'envelope-privacy') return '/envelope-budget/privacy'
+    if (p === 'envelope-support') return '/envelope-budget/support'
     return `/${p}`
   }, [])
 
@@ -82,6 +88,14 @@ function App() {
 
   if (page === 'memory-support') {
     return <MemorySupport />
+  }
+
+  if (page === 'envelope-privacy') {
+    return <EnvelopeBudgetPrivacy />
+  }
+
+  if (page === 'envelope-support') {
+    return <EnvelopeBudgetSupport />
   }
 
   return (

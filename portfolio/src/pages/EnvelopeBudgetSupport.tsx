@@ -1,11 +1,11 @@
-export default function MemorySupport() {
+export default function EnvelopeBudgetSupport() {
   return (
     <div style={{ minHeight: '100vh', background: '#0f1724' }}>
     <div style={{ maxWidth: 800, margin: '0 auto', padding: '40px 24px', fontFamily: 'sans-serif', color: 'rgba(255, 255, 255, 0.87)', lineHeight: 1.7 }}>
-      <h1>Support — The Memory Pulse</h1>
+      <h1>Support — Envelope Budget</h1>
 
       <p>
-        Need help with <strong>The Memory Pulse</strong>? We're happy to assist. Reach out to us at{' '}
+        Need help with <strong>Envelope Budget</strong>? We're happy to assist. Reach out to us at{' '}
         <a href="mailto:codebystory@gmail.com">codebystory@gmail.com</a> and we'll get back to you as soon as we can.
       </p>
 
