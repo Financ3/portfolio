@@ -51,9 +51,9 @@ export default function Projects() {
           syncs the frontend on every push to main.
         </li>
         <li>
-          <strong><Tip>Memory Retention App</Tip></strong>{" "}
+          <strong><a href="https://apps.apple.com/us/app/the-memory-pulse/id6759820769" target="_blank" rel="noopener noreferrer">Memory Retention App</a></strong>{" "}
           — A mobile app to help users build and maintain long-term memory through spaced repetition
-          and active recall techniques.
+          and active recall techniques. <Tip>Android</Tip> listing is pending app store approval.
         </li>
         <li>
           <strong>
@@ -63,6 +63,15 @@ export default function Projects() {
           </strong>{" "}
           — A daily quote app delivering a fresh and funny, inspiring, or depressing quote each day! The app comes in an image format designed to be used as a wallpaper on your phone.
           {" "}Available now on iOS. <Tip>Android</Tip> listing is pending app store approval.
+        </li>
+        <li>
+          <strong>
+            <a href="https://apps.apple.com/us/app/budget-envelope/id6760275377" target="_blank" rel="noopener noreferrer">
+              Budget Envelope
+            </a>
+          </strong>{" "}
+          — A budgeting app built around the envelope method, helping users allocate and track spending
+          across categories. Available now on iOS. <Tip>Android</Tip> listing is pending app store approval.
         </li>
       </ul>
     </section>
