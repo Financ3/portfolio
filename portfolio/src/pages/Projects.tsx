@@ -73,6 +73,12 @@ export default function Projects() {
           — A budgeting app built around the envelope method, helping users allocate and track spending
           across categories. Available now on iOS. <Tip>Android</Tip> listing is pending app store approval.
         </li>
+        <li>
+          <strong>
+            Day Trader App
+          </strong>{" "}
+          A machine learning application I am working on to predict stock price movements and assist with day trading decisions. The app will leverage historical stock data, technical indicators, and sentiment analysis to generate trading signals. It is currently in development and I run it locally only - currently training using fake money. We will see where this project goes!
+        </li>
       </ul>
     </section>
   )
