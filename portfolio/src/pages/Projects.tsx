@@ -43,8 +43,8 @@ export default function Projects() {
           app tracks the product's price on a daily schedule — notifying them the moment it falls.
           {" "}The backend is built on AWS Lambda (Python 3.13) using AWS SAM for infrastructure-as-code,
           with four functions handling subscriptions, scheduled scraping, fan-out notifications, and
-          unsubscribes. Prices are scraped using BeautifulSoup and Requests, with ScraperAPI as a
-          fallback for JavaScript-rendered pages. Product and subscription data is stored in DynamoDB,
+          unsubscribes. Prices are scraped using BeautifulSoup and Requests, with a multi-strategy extraction pipeline: JSON-LD structured
+  data, OpenGraph meta tags, CSS selector heuristics, and a proximity-based DOM sweep as a last resort.. Product and subscription data is stored in DynamoDB,
           price-drop events are published to an SNS topic that triggers the notifier Lambda, and emails
           are sent via AWS SES. The frontend is a static vanilla HTML/CSS/JS page hosted on S3 behind
           CloudFront. Deployments are automated via GitHub Actions, which runs SAM build/deploy and
